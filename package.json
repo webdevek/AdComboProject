@@ -1,0 +1,37 @@
+{
+  "name": "adcombo",
+  "version": "1.0.0",
+  "description": "testProject",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "webdevek",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "core-js": "^3.10.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^6.1.2"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "last 3 ie versions",
+    "maintained node versions",
+    "not dead"
+  ]
+}

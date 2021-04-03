@@ -1,0 +1,30 @@
+.features {
+   background-color: #F8FBFF;
+   padding-top: 40px;
+   padding-bottom: 9px;
+   &__divider {
+      margin: 0 auto;
+      width: 184px;
+      height: 4px;
+      background: #00C368;
+   }
+   h2 {
+      margin: 0 auto;
+      padding-top: 16px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #2E3A59;
+   }
+   &__title {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: #2E3A59;
+   }
+
+}
