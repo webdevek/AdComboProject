@@ -21,46 +21,19 @@
          top: 0;
          transition: 0.5s all;
       }
-
       &.active::after {
          background: url('../icons/spoler/Vector_up.png');
       }
-
-
-
-      // &::before, &::after {
-      //    content: '';
-      //    position: absolute;
-      //    width: 11px;
-      //    height: 2px;
-      //    background: #A6ABBD;
-      //    top: 8px;
-      //    transition: 0.3s all;
-      // }
-      // &::before {
-      //    transform: rotate(-40deg);
-      //    right: 0;
-      // }
-      // &::after {
-      //    transform: rotate(40deg);
-      //    right: 7px;
-      // }
       &:hover {
          color: #00C368;
       }
-
-      // &.active::before {
-      //    transform: rotate(40deg);
-      // }
-      // &.active::after {
-      //    transform: rotate(-40deg);
-      // }
       &.active {
          color: #00C368;
       }
    }
    &__text {
       display: none;
+      padding-top: 20px;
       font-weight: normal;
       font-size: 16px;
       line-height: 19px;

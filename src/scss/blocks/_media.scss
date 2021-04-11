@@ -17,19 +17,22 @@
    .features {
       &__inner {
          padding: 0 16px;
+         padding-bottom: 10px;
       }
    }
    .feedback {
       padding-top: 40px;
       padding-left: 16px;
       padding-right: 16px;
+      &__desctop {
+         display: none;
+      }
    }
 }
 
 @media (min-width: 375px) {
-
    .feedback {
-      &__item, &__item {
+      &__item {
          img {
             width: 59px;
          }
@@ -45,34 +48,38 @@
 
 @media (min-width: 425px) {
    .feedback {
-      &__item, &__item {
+      &__item {
          img {
             width: 65px;
          }
       }
       &__wrap_right {
-         width: 290px;
+         width: 75%;
+         min-width: 290px;
       }
       &__wrap_left {
-         width: 290px;
+         width: 75%;
+         min-width: 290px;
       }
    }
 }
 
 @media (min-width: 576px) {
    .feedback {
-      &__item, &__item {
+      &__item {
          img {
             width: 70px;
-            margin-right: 45px;
-            margin-left: 45px;
+            margin-right: 40px;
+            margin-left: 40px;
          }
       }
       &__wrap_right {
-         width: 370px;
+         width: 70%;
+         min-width: 350px;
       }
       &__wrap_left {
-         width: 370px;
+         width: 70%;
+         min-width: 350px;
       }
    }
 }
@@ -166,21 +173,22 @@
    .feedback {
       padding-left: 50px;
       padding-right: 50px;
-      &__item, &__item {
+      &__item {
          img {
             width: 70px;
-            margin-right: 50px;
-            margin-left: 50px;
+            margin-right: 40px;
+            margin-left: 40px;
          }
       }
       &__wrap_right {
-         width: 550px;
+         width: 75%;
+         min-width: 480px;
       }
       &__wrap_left {
-         width: 550px;
+         width: 75%;
+         min-width: 480px;
       }
    }
-
 }
 
 @media (min-width: 1024px) {
@@ -331,7 +339,6 @@
    .promo {
       &__wrapper {
          background: #F8FBFF;
-         padding-bottom: 9px;
          &::after {
             content: '';
             clear: both;
@@ -348,7 +355,6 @@
       padding-right: 50px;
       &__divider {
          margin: 0 auto;
-         // margin-top: 100px;
       }
       h2 {
          padding-top: 12px;
@@ -361,8 +367,6 @@
       &__inner {
          width: 100%;
          padding: 0;
-         // margin: 0 left;
-         // text-align: left;
       }
       
    }
@@ -370,10 +374,38 @@
       background: #F5F5F5;
       margin: 0 right;
       padding-top: 100px;
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 16px;
+      padding-right: 16px;
       float: left;
       width: 50%;
+      &__desctop {
+         display: none;
+      }
+      &__item {
+         img {
+            width: 80px;
+            margin-right: 5px;
+            margin-left: 5px;
+         }
+      }
+      &__wrapper_right {
+         float: right;
+         width: 50%;
+      } 
+      &__wrapper_left {
+         float: left;
+         width: 50%;
+      } 
+      &__wrap_right {
+         float: left;
+         min-width: 110px;
+         width: 55%;
+      }
+      &__wrap_left {
+         float: right;
+         min-width: 10px;
+         width: 55%;
+      }
    }
 }
 
@@ -383,37 +415,31 @@
       background: url('../img/main_bg.png') center center / cover no-repeat;
       position: relative;
       z-index: 1;
-         // &:before {
-         //    content: '';
-         //    position: absolute;
-         //    display: block;
-         //    // width: 450px;
-         //    width: 100vw;
-         //    // height: 
-         //    // min-height: 100vh;
-         //    height: 950px;
-         //    top: 0;
-         //    left: 0;
-         //    z-index: 20;
-         //    background: url('../img/bubbles_left.svg') no-repeat;
-         //    // background-attachment: fixed;
-         // }
-         // &:after {
-         //    content: '';
-         //    position: absolute;
-         //    display: block;
-         //    // top: 132px;
-         //    bottom: 100px;
-         //    right: 70vw;
-         //    // width: 557px;
-         //    width: 100%;
-         //    height: 950px;
-         //    z-index: 20;
-         //    background: url('../img/bubbles_right_.png');
-         //    background-repeat: no-repeat;
-         //    // background-size: cover;
-         //    background-attachment: fixed;
-         // }
+         &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 450px;
+            height: 690px;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            background: url('../img/bubbles_left.svg') no-repeat;
+            background-attachment: fixed;
+         }
+         &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            width: 420px;
+            height: 690px;
+            z-index: 20;
+            background: url('../img/bubbles_right_.png');
+            background-attachment: fixed;
+            // background-repeat: no-repeat;
+         }
       }
       &_descr {
             width: 176px;
@@ -435,6 +461,7 @@
          display: none;
       }
       &__desctop {
+         display: block;
          margin-top: 48px;
          overflow: hidden;
          &:after {
@@ -445,20 +472,44 @@
          img {
             display: block;
             float: left;
-            width: 187px;
+            width: 27%;
+            max-width: 187px;
             padding: 0;
          }
          &_wrap {
+            position: relative;
             height: 100%;
             float: right;
-
+            width:60%;
          }
          &_text {
+            padding-right: 40px;
             font-weight: 400;
             font-size: 16px;
             line-height: 150%;
             color: #2E3A59;
-            // width: 300px;
+            &::before {
+               content: '';
+               position: absolute;
+               display: block;
+               width: 40px;
+               height: 26px;
+               top: 0;
+               left: -50px;
+               z-index: 10;
+               background: url('../icons/quotes_left_green.png');
+            }
+            &::after {
+               content: '';
+               position: absolute;
+               display: block;
+               width: 40px;
+               height: 26px;
+               bottom: 35px;
+               right: 0;
+               z-index: 10;
+               background: url('../icons/quotes_right_green.png');
+            }
          }
          &_author {
             padding-top: 20px;
@@ -467,27 +518,30 @@
             line-height: 19px;
             color: #2E3A59;
          }
-
-
-
-
-         // img {
-         //    position: relative;
-         // }
-         // &:before {
-         //    width: 40px;
-         //    height: 26px;
-         //    top: 20px;
-         //    left: 16px;
-         //    background-image: url(../../icons/quotes_left_green.png);
-         // }
-         // &:after {
-         //    width: 40px;
-         //    height: 26px;
-         //    top: 20px;
-         //    right: 16px;
-         //    background-image: url(../../icons/quotes_right_green.png);
-         // }
+      }
+   }
+}
+@media (min-width: 1920px) {
+   .feedback {
+      padding-left: 90px;
+      padding-right: 90px;
+      &__inner {
+         display: none;
+      }
+      &__desctop {
+         display: block;
+         margin-top: 48px;
+         overflow: hidden;
+         img {
+            width: 20%;
+            max-width: 187px;
+            padding: 0;
+         }
+         &_wrap {
+            height: 100%;
+            float: right;
+            width: 70%;
+         }
       }
    }
 }
